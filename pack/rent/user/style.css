@@ -1,0 +1,84 @@
+<style>
+html {
+  font-size: 60%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 60%;
+  line-height: 1.1;
+  color: #333333;
+  background-color: #dde4e2;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.lidiv {
+  display:inline;
+  overflow:hidden;
+  position: relative;
+  right: 8%;
+  height: auto;
+  width: auto;
+}
+.lidiv img{
+  height: 100px;
+  object-fit: scale-down;
+  margin: 5px;
+}
+.lidiv img:hover{
+  -webkit-transform: scale(2.5);
+  -moz-transform: scale(2.5);
+  -o-transform: scale(2.5);
+  -ms-transform: scale(2.5);
+  transform: scale(2.5);
+}
+
+dt{
+  line-height: 1.428571429;
+  margin-left: 20%;
+}
+
+p{
+  height: 10px;
+}
+
+.img{
+  float: left;
+  position: relative;
+  left: 20%;
+  top: -150px;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  background: #eee7d7;
+  border-radius: 62px;
+}
+
+.img img {
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  width: 250px;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    var imgs = document.querySelectorAll('img');
+    Array.prototype.forEach.call(imgs, function(el, i) {
+        if (el.tabIndex <= 0) el.tabIndex = 10000;
+    });
+});
+
+$.ajax({
+   url: "~/rent.py",
+   success: function(response) {
+     // here you do whatever you want with the response variable
+   }
+});
+</script>
