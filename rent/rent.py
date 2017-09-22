@@ -217,7 +217,7 @@ def main():
     pageurls = []
     roomurls = []
 
-    mode = raw_input('Enter Mode (all, bookmark, locations; locations by default): ')
+    mode = raw_input('Enter Mode (all, bookmark, location; location by default): ')
     if mode == "" or mode == None:
         mode = ATTRIBUTES #ATTRIBUTES = search residence by location, BOOKMARK
     if mode == ATTRIBUTES:
